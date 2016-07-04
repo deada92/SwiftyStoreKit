@@ -387,6 +387,7 @@
 					};
 					6502F62C1B985C40004E342D = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0800;
 					};
 					C4D74BBA1C24CEC90071AD3E = {
 						CreatedOnToolsVersion = 7.2;
@@ -736,6 +737,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.musevisions.iOS.SwiftyStoreKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -757,6 +759,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.musevisions.iOS.SwiftyStoreKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
