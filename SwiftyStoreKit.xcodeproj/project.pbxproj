@@ -33,6 +33,7 @@
 		C4083C571C2AB0A900295248 /* InAppReceiptRefreshRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4083C561C2AB0A900295248 /* InAppReceiptRefreshRequest.swift */; };
 		C40C68101C29414C00B60B7E /* OS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40C680F1C29414C00B60B7E /* OS.swift */; };
 		C40C68111C29419500B60B7E /* OS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40C680F1C29414C00B60B7E /* OS.swift */; };
+		C45983741D2A8144005DE255 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C45983731D2A8144005DE255 /* StoreKit.framework */; };
 		C4A7C7631C29B8D00053ED64 /* InAppReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A7C7621C29B8D00053ED64 /* InAppReceipt.swift */; };
 		C4D74BBE1C24CECA0071AD3E /* SwiftyStoreKitOSX.h in Headers */ = {isa = PBXBuildFile; fileRef = C4D74BBD1C24CECA0071AD3E /* SwiftyStoreKitOSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C4D74BC31C24CEDC0071AD3E /* InAppProductPurchaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6502F6221B98586A004E342D /* InAppProductPurchaseRequest.swift */; };
@@ -110,6 +111,9 @@
 		65C1B5DE1BB9DE9B00F7BF4E /* NetworkActivityIndicatorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkActivityIndicatorManager.swift; sourceTree = "<group>"; };
 		C4083C561C2AB0A900295248 /* InAppReceiptRefreshRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppReceiptRefreshRequest.swift; sourceTree = "<group>"; };
 		C40C680F1C29414C00B60B7E /* OS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OS.swift; sourceTree = "<group>"; };
+		C45983621D2A77C5005DE255 /* SwiftyStoreKitiOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftyStoreKitiOS.h; sourceTree = "<group>"; };
+		C45983641D2A77C5005DE255 /* SwiftyStoreKitiOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwiftyStoreKitiOS.m; sourceTree = "<group>"; };
+		C45983731D2A8144005DE255 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C4A7C7621C29B8D00053ED64 /* InAppReceipt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppReceipt.swift; sourceTree = "<group>"; };
 		C4D74BBB1C24CEC90071AD3E /* SwiftyStoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyStoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4D74BBD1C24CECA0071AD3E /* SwiftyStoreKitOSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftyStoreKitOSX.h; sourceTree = "<group>"; };
@@ -142,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C45983741D2A8144005DE255 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,7 +185,9 @@
 				C4D74BBC1C24CECA0071AD3E /* SwiftyStoreKitOSX */,
 				C4FD3A021C2954C10035CFF3 /* SwiftyStoreOSXDemo */,
 				54C0D52D1CF7404500F90BCE /* SwiftyStoreKitTV */,
+				C45983611D2A77C5005DE255 /* SwiftyStoreKitiOS */,
 				6502F5FF1B985833004E342D /* Products */,
+				C45983721D2A8144005DE255 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -224,6 +231,23 @@
 				65C1B5DE1BB9DE9B00F7BF4E /* NetworkActivityIndicatorManager.swift */,
 			);
 			path = SwiftyStoreDemo;
+			sourceTree = "<group>";
+		};
+		C45983611D2A77C5005DE255 /* SwiftyStoreKitiOS */ = {
+			isa = PBXGroup;
+			children = (
+				C45983621D2A77C5005DE255 /* SwiftyStoreKitiOS.h */,
+				C45983641D2A77C5005DE255 /* SwiftyStoreKitiOS.m */,
+			);
+			path = SwiftyStoreKitiOS;
+			sourceTree = "<group>";
+		};
+		C45983721D2A8144005DE255 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C45983731D2A8144005DE255 /* StoreKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		C4D74BBC1C24CECA0071AD3E /* SwiftyStoreKitOSX */ = {
@@ -381,12 +405,18 @@
 				TargetAttributes = {
 					54C0D52B1CF7404500F90BCE = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = ZJB2J5C7VN;
+						DevelopmentTeamName = "Saif Al-Dilaimi";
 					};
 					6502F5FD1B985833004E342D = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = ZJB2J5C7VN;
+						DevelopmentTeamName = "Saif Al-Dilaimi";
 					};
 					6502F62C1B985C40004E342D = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = ZJB2J5C7VN;
+						DevelopmentTeamName = "Saif Al-Dilaimi";
 						LastSwiftMigration = 0800;
 					};
 					C4D74BBA1C24CEC90071AD3E = {

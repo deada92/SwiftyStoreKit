@@ -29,11 +29,11 @@ extension PaymentTransactionState {
     
     var stringValue: String {
         switch self {
-        case purchasing: return "Purchasing"
-        case purchased: return "Purchased"
-        case failed: return "Failed"
-        case restored: return "Restored"
-        case deferred: return "Deferred"
+            case .Purchasing: return "Purchasing"
+            case .Purchased: return "Purchased"
+            case .Failed: return "Failed"
+            case .Restored: return "Restored"
+            case .Deferred: return "Deferred"
         }
     }
 }
@@ -77,10 +77,10 @@ class InAppCompleteTransactionsObserver: NSObject, SKPaymentTransactionObserver 
             #if os(iOS) || os(tvOS)
                 let transactionState = transaction.transactionState
             #elseif os(OSX)
-                let transactionState = PaymentTransactionState(rawValue: transaction.transactionState)!
+                let transactionState = PaymentTransactionState(rawValue: transaction.transactionState.rawValue)!
             #endif
 
-            if transactionState != .purchasing {
+            if transactionState != .Purchasing {
                 
                 let completedTransaction = SwiftyStoreKit.CompletedTransaction(productId: transaction.payment.productIdentifier, transactionState: transactionState)
                 
